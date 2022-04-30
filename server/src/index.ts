@@ -1,8 +1,2 @@
-import { app } from "./config/app";
-import { connection } from "./config/connection";
+import { app } from "./app";
 
-function helloWorld() {
-  console.log("helloWorld")
-}
-
-helloWorld()
