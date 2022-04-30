@@ -2,7 +2,7 @@ import { app } from "./config/app";
 import { connection } from "./config/connection";
 
 function helloWorld() {
-  console.log("helloWorld")
+  return {hello: "Hello World"}
 }
 
 helloWorld()
