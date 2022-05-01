@@ -76,9 +76,9 @@ Assim, as escolhas de tecnologia foram baseadas em performance, agilidade e segu
 * **Lucas Pasche** - *Back-End* - ([Github](https://github.com/llpasche), [Linkedin](https://www.linkedin.com/in/lucas-pasche/))
 
 ### Pesquisa de UX e prototipação do Design
-* **João Marcos Maracaipe** - *UX/UI design* - ([Linkedin](https://www.linkedin.com/in/jmaracaipe/))
-* **Jocieli Araújo** - *UX* - ([Medium](https://medium.com/@jocieli.arasilva/vigia-grana-aprimorando-a-gest%C3%A3o-financeira-pessoal-dc2f2c7c70c2)[Linkedin](https://www.linkedin.com/in/jocieli-ara%C3%BAjo-329a7628/))
-* **Sandy Lima** - *UX/UI design* - ([Medium](https://medium.com/@sandylimas), [Notion](https://sandylima.notion.site/Bem-vind-a420320ee7c74abdaeb76e2019db9b2d), [Linkedin](https://www.linkedin.com/in/sandylima/))
+* **João Marcos Maracaipe** - *UX/UI design JR* - ([Behance](behance.net/jmaracaipe), [Linkedin](https://www.linkedin.com/in/jmaracaipe/))
+* **Jocieli Araújo** - *UX JR* - ([Medium](https://medium.com/@jocieli.arasilva/vigia-grana-aprimorando-a-gest%C3%A3o-financeira-pessoal-dc2f2c7c70c2), [Linkedin](https://www.linkedin.com/in/jocieli-ara%C3%BAjo-329a7628/))
+* **Sandy Lima** - *UX/UI design JR* - ([Medium](https://medium.com/@sandylimas), [Notion](https://sandylima.notion.site/Bem-vind-a420320ee7c74abdaeb76e2019db9b2d), [Linkedin](https://www.linkedin.com/in/sandylima/))
 
 ### PM (Product manager)
 * **Mariana Andrade** - [Linkedin](https://www.linkedin.com/in/marianaandraderj/)
