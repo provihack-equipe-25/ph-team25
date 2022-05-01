@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const app_1 = require("./config/app");
+const createCompany_1 = require("./endpoints/createCompany");
+const createWaste_1 = require("./endpoints/createWaste");
+const getCompanies_1 = require("./endpoints/getCompanies");
+const getCompanyByMaterialNeeds_1 = require("./endpoints/getCompanyByMaterialNeeds");
+const getCompanyByWasteProduced_1 = require("./endpoints/getCompanyByWasteProduced");
+const getWastes_1 = require("./endpoints/getWastes");
+const getWastesByCity_1 = require("./endpoints/getWastesByCity");
+const getWastesByMaterialType_1 = require("./endpoints/getWastesByMaterialType");
+const updateCompany_1 = require("./endpoints/updateCompany");
+const updateWasteStatus_1 = require("./endpoints/updateWasteStatus");
+app_1.app.post("/company", createCompany_1.createCompany);
+app_1.app.post("/waste", createWaste_1.createWaste);
+app_1.app.get("/company", getCompanies_1.getCompanies);
+app_1.app.get("/company/waste", getCompanyByWasteProduced_1.getCompanyByWasteProduced);
+app_1.app.get("/company/needs", getCompanyByMaterialNeeds_1.getCompanyByMaterialNeeds);
+app_1.app.get("/waste", getWastes_1.getWastes);
+app_1.app.get("/wastes-near-me", getWastesByCity_1.getWastesByCity);
+app_1.app.get("/wastes-by-type", getWastesByMaterialType_1.getWastesByMaterialType);
+app_1.app.patch("/waste/:id/status", updateWasteStatus_1.updateWasteStatus);
+app_1.app.patch("/company/:id", updateCompany_1.updateCompany);
+//# sourceMappingURL=index.js.map
