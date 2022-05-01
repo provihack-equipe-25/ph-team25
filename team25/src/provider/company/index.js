@@ -57,4 +57,13 @@ export const CompaniesProvider = ({ children }) => {
       })
       .catch(() => {});
   };
+
+  const getCompanyWaste = (waste) => {
+    base_url
+      .get(`/company/${waste}`)
+      .then((response) => {
+        setCompanys(response.data);
+      })
+      .catch(() => {});
+  };
 };
