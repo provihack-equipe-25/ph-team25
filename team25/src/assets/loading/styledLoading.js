@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const LoadingContainer = styled.div`
   width: 35px;
+  align-self: center;
   animation: loading-spin ease 1.2s infinite;
   img{
     width: 35px;

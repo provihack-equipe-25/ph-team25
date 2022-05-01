@@ -2,6 +2,9 @@ import styled from "styled-components"
 import { colors } from "../../constants/theme"
 
 export const ButtonContainer = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
   min-width: 182px;
   max-width: fit-content;
   height: 60px;
