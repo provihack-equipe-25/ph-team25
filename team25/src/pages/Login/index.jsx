@@ -1,32 +1,39 @@
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { Container, Form, Input } from "./styles";
-import { useCompanies } from "../../provider/company";
+import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import { useForm } from "react-hook-form"
+import {
+  PageContainer,
+  Form,
+  Input,
+  ActionContainer,
+  FormContainer,
+  DecorationContainer,
+} from "./styles"
+import { useCompanies } from "../../provider/company"
+import BaseButton from "../../components/base-button/BaseButton"
+import AppSymbol from "../../components/app-symbol/AppSymbol"
+import login from "../../assets/login.png"
 
 const Login = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   useEffect(() => {
-    const token = localStorage.getItem("@userToken");
+    const token = localStorage.getItem("@userToken")
     if (token) {
-      navigate("/dashboard");
+      navigate("/dashboard")
     }
-  });
-  const { userLogin } = useCompanies();
+  })
+  const { userLogin } = useCompanies()
 
   const schema = yup.object().shape({
-    email: yup
-      .string()
-      .email("Email invalid")
-      .required("Digite um E-mail necessário"),
+    email: yup.string().email("Email inválido").required("Digite um E-mail"),
     senha: yup
       .string()
       .required("Digite sua senha")
       .min(8, "Minimo de 8 caracteres"),
-  });
+  })
 
   const {
     register,
@@ -34,19 +41,37 @@ const Login = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
-  });
+  })
 
   return (
-    <Container>
-      <Form onSubmit={handleSubmit(userLogin)}>
-        <Input {...register("email")} type="text" placeholder="E-mail" />
-        <span>{errors.email?.message}</span>
-        <Input {...register("senha")} type="password" placeholder="Senha" />
-        <span>{errors.senha?.message}</span>
-        <button>Entrar</button>
-      </Form>
-    </Container>
-  );
-};
+    <PageContainer>
+      <AppSymbol />
 
-export default Login;
+      <FormContainer>
+        <Form onSubmit={handleSubmit(userLogin)}>
+          <h1>Entre agora</h1>
+          <Input {...register("email")} type="text" placeholder="E-mail" />
+          <span>{errors.email?.message}</span>
+          <Input {...register("senha")} type="password" placeholder="Senha" />
+          <span>{errors.senha?.message}</span>
+          <ActionContainer>
+            <a href="/">Esqueceu a senha?</a>
+            <BaseButton>Entrar</BaseButton>
+          </ActionContainer>
+          <p>
+            Não tem uma conta ainda? <a href="/signup">Faça o seu cadastro</a>
+          </p>
+        </Form>
+      </FormContainer>
+      <DecorationContainer>
+        <h1>Boas vindas</h1>
+        <h2>
+          Descarte e recicle tecidos têxteis. Contribua para o meio ambiente.
+        </h2>
+        <img src={login} alt="camiseta para descarte em um notebook" />
+      </DecorationContainer>
+    </PageContainer>
+  )
+}
+
+export default Login
