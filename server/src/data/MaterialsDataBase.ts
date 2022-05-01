@@ -2,7 +2,7 @@ import { generateId } from "../services/generateId";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class MaterialsDatabase extends BaseDatabase {
-  public insertNeed = async (needs: string[] | string, companyId: string) => {
+  public insertNeed = async (needs: string[] | string, companyId: string): Promise<void> => {
     if (typeof needs === "string") {
       await BaseDatabase.connection("material_needs").insert({
         id: generateId(),
@@ -19,7 +19,7 @@ export class MaterialsDatabase extends BaseDatabase {
       }
     }
   };
-  public insertProduced = async (products: string[], companyId: string) => {
+  public insertProduced = async (products: string[] | string, companyId: string) => {
     if (typeof products === "string") {
       await BaseDatabase.connection("material_produces").insert({
         id: generateId(),

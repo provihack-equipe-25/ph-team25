@@ -1,4 +1,5 @@
 import { Company } from "../entities/Company";
+import { generateId } from "../services/generateId";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class CompanyDatabase extends BaseDatabase {
@@ -33,6 +34,7 @@ export class CompanyDatabase extends BaseDatabase {
       throw new Error(error.sqlMessage || error.message);
     }
   };
+
   public findCompanyByCnpj = async (cnpj: string): Promise<any> => {
     try {
       const company = await BaseDatabase.connection("companies").where({
@@ -69,6 +71,35 @@ export class CompanyDatabase extends BaseDatabase {
         companiesArray.push(company);
       }
       return companiesArray;
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  };
+
+  public getCompanyById = async (id: string): Promise<any> => {
+    try {
+      let company = await BaseDatabase.connection("companies").where({
+        id,
+      });
+      const wastes = await BaseDatabase.connection("waste").where(
+        "company_id",
+        id
+      );
+      const needs = await BaseDatabase.connection("material_needs").where(
+        "company_id",
+        id
+      );
+      const produced = await BaseDatabase.connection("material_produces").where(
+        "company_id",
+        id
+      );
+      
+      return {
+        ...company[0],
+        wastes: wastes,
+        needs: needs,
+        produced: produced,
+      };
     } catch (error: any) {
       throw new Error(error.sqlMessage || error.message);
     }

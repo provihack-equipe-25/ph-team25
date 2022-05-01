@@ -32,7 +32,6 @@ export const createWaste = async (
 
     res.status(201).send({ message: "Anúncio cadastrado com sucesso!" });
   } catch (error: any) {
-    console.log(error);
     if (res.statusCode === 200) {
       res.status(500).send("Internal server error.");
     } else {
