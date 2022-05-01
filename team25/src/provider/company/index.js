@@ -1,6 +1,5 @@
 import { createContext, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { resolveTo } from "react-router/lib/router";
 import base_url from "../../services/base_url";
 
 const CompaniesContext = createContext();
@@ -75,4 +74,22 @@ export const CompaniesProvider = ({ children }) => {
       })
       .catch(() => {});
   };
+
+  return (
+    <CompaniesContext.Provider
+      value={{
+        company,
+        companys,
+        getCompany,
+        getCompanyId,
+        userLogin,
+        getCompanyWaste,
+        getCompanyNeeds,
+      }}
+    >
+      {children}
+    </CompaniesContext.Provider>
+  );
 };
+
+export const useCompanies = () => useContext(CompaniesContext);
