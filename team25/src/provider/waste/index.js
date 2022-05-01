@@ -36,3 +36,5 @@ export const WasteProvider = ({ children }) => {
     </WasteContext.Provider>
   );
 };
+
+export const useWaste = () => useContext(WasteContext);
