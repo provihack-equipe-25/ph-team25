@@ -3,21 +3,25 @@ import { colors } from "../../constants/theme"
 
 export const ButtonContainer = styled.button`
   min-width: 182px;
+  max-width: fit-content;
   height: 60px;
   border: none;
   padding: 0 20px;
   background: ${(props) => {
     const setColor = props.color
-    return props.color? colors[setColor] : colors.main}};
+    return props.color ? colors[setColor] : colors.main
+  }};
   border-radius: 4px;
-  font-style: normal;
-  font-weight: 600;
+  font-style: bold;
+  font-weight: 900;
   font-size: 18px;
   color: white;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   transition: 400ms ease;
   cursor: pointer;
   :hover {
-    opacity: 80%;
+    opacity: 95%;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
   }
   :active {
     opacity: 100%;
