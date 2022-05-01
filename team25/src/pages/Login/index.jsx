@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Container, Form, Input } from "./styles";
+import { useCompanies } from "../../provider/company";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Login = () => {
       navigate("/dashboard");
     }
   });
-  const userLogin = () => {};
+  const { userLogin } = useCompanies();
 
   const schema = yup.object().shape({
     email: yup
