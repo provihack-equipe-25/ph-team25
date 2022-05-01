@@ -20,7 +20,7 @@ export const HeaderContainer = styled.header`
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
-      color: white;
+      color: ${colors.gray3};
     }
     img {
       width: 156px;

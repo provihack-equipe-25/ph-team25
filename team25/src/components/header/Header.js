@@ -1,6 +1,6 @@
 import React from "react"
 import { HeaderContainer } from "./styledHeader"
-import logo from "../../assets/logo/aws_grandetryagain.png"
+import logo from "../../assets/logo/logoblack.png"
 import { useNavigate } from "react-router-dom"
 import BaseButton from "../base-button/BaseButton"
 
