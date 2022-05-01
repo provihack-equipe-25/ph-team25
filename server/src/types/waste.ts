@@ -9,13 +9,4 @@ export enum MATERIAL_TYPE {
   POLIESTER = "Poliéster",
 }
 
-export type waste = {
-    id: string,
-    companyId: string,
-    name: string,
-    type: MATERIAL_TYPE,
-    quantity: string,
-    taken: number,
-    location: string,
-    image: string
-}
+
