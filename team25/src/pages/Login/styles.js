@@ -28,6 +28,10 @@ export const PageContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    padding-top: 20vh;
+  }
 `
 
 export const DecorationContainer = styled.div`
@@ -59,6 +63,7 @@ export const DecorationContainer = styled.div`
     font-size: 24px;
     text-align: center;
     z-index: 1;
+    max-width: 400px;
   }
   img {
     max-width: 600px;
@@ -67,6 +72,16 @@ export const DecorationContainer = styled.div`
     right: 0;
     top: 45vh;
     align-self: flex-end;
+  }
+  @media screen and (max-width: 900px) {
+    margin-top: 40px;
+    width: 100%;
+    img{
+display: none;
+    }
+    h1{
+      margin-top: 40px;
+    }
   }
 `
 

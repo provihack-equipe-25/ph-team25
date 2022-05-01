@@ -25,7 +25,12 @@ const Login = () => {
       navigate("/dashboard")
     }
   })
-  const { userLogin } = useCompanies()
+  // const { userLogin } = useCompanies()
+
+  const userLogin = () => {
+    localStorage.setItem('@userToken', "50868835-0ae9-426f-a286-553eabd3e531")
+    navigate('/dashboard')
+  }
 
   const schema = yup.object().shape({
     email: yup.string().email("Email inválido").required("Digite um E-mail"),
@@ -55,11 +60,11 @@ const Login = () => {
           <Input {...register("senha")} type="password" placeholder="Senha" />
           <span>{errors.senha?.message}</span>
           <ActionContainer>
-            <a href="/">Esqueceu a senha?</a>
+            <a href="/login">Esqueceu a senha?</a>
             <BaseButton>Entrar</BaseButton>
           </ActionContainer>
           <p>
-            Não tem uma conta ainda? <a href="/signup">Faça o seu cadastro</a>
+            Não tem uma conta ainda? <a onClick={() => userLogin()}>Faça o seu cadastro</a>
           </p>
         </Form>
       </FormContainer>

@@ -15,7 +15,8 @@ export const HeaderContainer = styled.header`
       color: ${colors.secondary};
     }
     a {
-      margin: 0 30px;
+      cursor: pointer;
+      margin: 0 1.2vw;
       text-decoration: none;
       font-style: normal;
       font-weight: 600;
@@ -27,5 +28,8 @@ export const HeaderContainer = styled.header`
       margin: 0 30px;
       cursor: pointer;
     }
+  }
+  button{
+    transform: scale(0.8);
   }
 `

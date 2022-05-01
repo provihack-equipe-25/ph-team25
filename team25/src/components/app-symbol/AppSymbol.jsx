@@ -1,8 +1,10 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import logo from "../../assets/logo/appsymbol.png"
 
 const Symbol = styled.div`
+cursor: pointer;
   position: absolute;
   width: 46px;
   height: 64px;
@@ -14,7 +16,10 @@ const Symbol = styled.div`
 `
 
 export default function AppSymbol() {
-  return <Symbol>
+
+  const navigate = useNavigate()
+
+  return <Symbol onClick={() => navigate('/')}>
   <img src={logo} alt='app symbol'/>
   </Symbol>
 }

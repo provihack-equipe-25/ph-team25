@@ -6,21 +6,36 @@ import BaseButton from "../base-button/BaseButton"
 
 export default function Header() {
   const navigate = useNavigate()
-  const loggedin = localStorage.getItem("token")
+  const loggedin = localStorage.getItem("@userToken")
 
   return (
     <HeaderContainer>
       <div className="links">
-        <img onClick={() => navigate("/")} src={logo} alt="TryAgain logo" />
-        <a href="/" id="home">
+        <img
+          onClick={() => {
+            loggedin ? navigate("/dashboard") : navigate("/")
+          }}
+          src={logo}
+          alt="TryAgain logo"
+        />
+        <a onClick={() => {
+            loggedin ? navigate("/dashboard") : navigate("/")
+          }} id="home">
           Home
         </a>
-        <a href="/search">Encontrar Parceiros</a>
-        <a href="/">Blog</a>
-        <a href="">Sobre</a>
+        <a>Encontrar Parceiros</a>
+        <a>Blog</a>
+        <a>Sobre</a>
       </div>
       {loggedin ? (
-        <BaseButton>Sair</BaseButton>
+        <BaseButton color="mainYellow" shadow="none"
+          onClick={() => {
+            localStorage.clear()
+            navigate("/")
+          }}
+        >
+          Sair
+        </BaseButton>
       ) : (
         <BaseButton onClick={() => navigate("/login")}>Login</BaseButton>
       )}
