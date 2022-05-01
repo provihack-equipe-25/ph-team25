@@ -4,7 +4,7 @@ export const colors = {
   mainWhite: "#FAFAFA",
   secondary: "#4C56F5",
   secondaryOrange: "#F5894C",
-  gray1: "#DBDBDB",
-  gray2: "#777777",
-  gray3: "373737"
+  gray1: "rgba(219, 219, 219, 1)",
+  gray2: "rgba(119, 119, 119, 1)",
+  gray3: "#373737"
 }

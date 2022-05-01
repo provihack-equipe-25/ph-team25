@@ -1,11 +1,12 @@
 import styled from "styled-components"
 import { colors } from "../../constants/theme"
-import hero from "../../assets/Hero-2.png"
+import hero from "../../assets/home/Hero-2.png"
 
 export const HomeContainer = styled.main`
   display: flex;
   flex-direction: column;
-  color: ${colors.secondary};
+  color: ${colors.main};
+  background-color: #FAFAFA;
 `
 
 export const FirstSection = styled.section`
@@ -17,18 +18,18 @@ export const FirstSection = styled.section`
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 70vh;
+  height: 50vh;
   .info {
     display: flex;
     flex-direction: column;
     width: 50%;
     h1 {
+      max-width: 75%;
       margin: 15px 0;
-      color: ${colors.mainYellow};
+      color: ${colors.gray1};
       font-style: normal;
       font-weight: 800;
-      font-size: 72px;
-      line-height: 100px;
+      font-size: 62px;
     }
     p {
       margin: 15px 0;
@@ -38,7 +39,7 @@ export const FirstSection = styled.section`
       font-size: 18px;
       line-height: 33px;
     }
-    #source{
+    #source {
       margin: 0;
       font-size: 12px;
       font-style: italic;
@@ -50,11 +51,11 @@ export const SecondSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 78px 120px 106px 120px;
+  padding: 78px 120px 0 120px;
   .title-subtitle {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     h2 {
       width: 45%;
       font-weight: 700;
@@ -64,10 +65,46 @@ export const SecondSection = styled.section`
       width: 40%;
       font-weight: 600;
       font-size: 18px;
+      color: ${colors.gray2};
     }
   }
   .rs {
+    margin: 56px 0;
     display: flex;
-   
+    justify-content: space-between;
+    img {
+      width: 30%;
+      margin: 7.5px;
+    }
   }
+`
+
+export const ThirdSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 120px;
+  h2 {
+    font-weight: 700;
+    font-size: 48px;
+  }
+  p {
+    margin: 40px 0 56px 0;
+    max-width: 556px;
+    font-weight: 600;
+    font-size: 18px;
+    color: ${colors.gray2};
+    text-align: center;
+  }
+  .process {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 25%;
+    }
+  }
+`
+
+export const MockSections = styled.img`
+  width: 100%;
 `
