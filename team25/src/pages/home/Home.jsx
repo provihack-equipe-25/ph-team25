@@ -37,7 +37,7 @@ export default function Home() {
             color="mainYellow"
             textColor="gray3"
             onClick={() => {
-              navigate("/signup")
+              navigate("/login")
             }}
           >
             Faça Parte!
@@ -71,17 +71,17 @@ export default function Home() {
           <img src={sec33} alt="reciclar"></img>
         </div>
       </ThirdSection>
-      <MockSections
+      <MockSections id="search"
         onClick={() => navigate("/login")}
         src={section4}
         alt="section4"
       />
-      <MockSections
+      <MockSections id="contact"
         onClick={() => navigate("/login")}
         src={contactUS}
         alt="section4"
       />
-      <MockSections
+      <MockSections id="about"
         onClick={() => navigate("/login")}
         src={footer}
         alt="section4"

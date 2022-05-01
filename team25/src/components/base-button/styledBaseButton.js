@@ -2,6 +2,9 @@ import styled from "styled-components"
 import { colors } from "../../constants/theme"
 
 export const ButtonContainer = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
   min-width: 182px;
   max-width: fit-content;
   height: 60px;
@@ -19,7 +22,7 @@ export const ButtonContainer = styled.button`
   font-style: bold;
   font-weight: 900;
   font-size: 18px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${props => props.shadow ? props.shadow : "0 2px 2px rgba(0, 0, 0, 0.25)"};
   transition: 400ms ease;
   cursor: pointer;
   :hover {
