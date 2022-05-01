@@ -10,6 +10,7 @@ import { getWastesByMaterialType } from "./endpoints/getWastesByMaterialType";
 import { updateCompany } from "./endpoints/updateCompany";
 import { updateWasteStatus } from "./endpoints/updateWasteStatus";
 
+
 app.post("/company", createCompany);
 app.post("/waste", createWaste);
 app.get("/company", getCompanies);
@@ -20,3 +21,4 @@ app.get("/wastes-near-me", getWastesByCity);
 app.get("/wastes-by-type", getWastesByMaterialType);
 app.patch("/waste/:id/status", updateWasteStatus);
 app.patch("/company/:id", updateCompany);
+
