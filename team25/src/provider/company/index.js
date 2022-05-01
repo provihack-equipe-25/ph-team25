@@ -33,26 +33,19 @@ export const CompaniesProvider = ({ children }) => {
   //   }
 
   const getCompany = () => {
-    const token = localStorage.getItem("@userToken");
-
-    if (token) {
-      base_url
-        .get("/company")
-        .then((response) => {
-          setCompanys(response.data);
-        })
-        .catch(() => {
-          localStorage.removeItem("@userToken");
-          setCompanys([]);
-        });
-    }
+    base_url
+      .get("/company")
+      .then((response) => {
+        setCompanys(response);
+      })
+      .catch(() => {});
   };
 
   const getCompanyId = (id) => {
     base_url
       .get(`/company/${id}`)
       .then((response) => {
-        setCompany(response.data);
+        setCompany(response);
       })
       .catch(() => {});
   };
@@ -61,7 +54,7 @@ export const CompaniesProvider = ({ children }) => {
     base_url
       .get(`/company/${waste}`)
       .then((response) => {
-        setCompanys(response.data);
+        setCompanys(response);
       })
       .catch(() => {});
   };
@@ -70,7 +63,7 @@ export const CompaniesProvider = ({ children }) => {
     base_url
       .get(`/company/${needs}`)
       .then((response) => {
-        setCompanys(response.data);
+        setCompanys(response);
       })
       .catch(() => {});
   };
