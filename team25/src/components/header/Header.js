@@ -1,7 +1,22 @@
 import React from 'react'
+import { HeaderContainer } from './styledHeader'
+import logo from '../../assets/logo/aws_grandetryagain.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
+
+  const navigate = useNavigate()
+
   return (
-    <div>Header</div>
+    <HeaderContainer>
+      <div className='links'>
+       <img onClick={() => navigate('/')} src={logo} alt='TryAgain logo'/>
+       <a href='' id='home'>Home</a>
+       <a href=''>Encontrar Parceiros</a>
+       <a href=''>Blog</a>
+       <a href=''>Sobre</a>
+      </div>
+        <button>Login</button>
+    </HeaderContainer>
   )
 }
