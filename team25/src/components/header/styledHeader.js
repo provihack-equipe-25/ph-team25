@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: ${colors.background};
+  background-color: ${colors.mainYellow};
   padding-top: 40px;
   padding-bottom: 8px;
   .links {
