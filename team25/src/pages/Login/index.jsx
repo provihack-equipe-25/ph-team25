@@ -49,6 +49,7 @@ const Login = () => {
   })
 
   return (
+
     <PageContainer>
       <AppSymbol />
 

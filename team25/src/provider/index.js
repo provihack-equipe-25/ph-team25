@@ -1,7 +1,12 @@
 import { CompaniesProvider } from "./company";
+import { WasteProvider } from "./waste";
 
 const Provider = ({ children }) => {
-  return <CompaniesProvider>{children}</CompaniesProvider>;
+  return (
+    <WasteProvider>
+      <CompaniesProvider>{children}</CompaniesProvider>
+    </WasteProvider>
+  );
 };
 
 export default Provider;
