@@ -1,7 +1,10 @@
 import { app } from "./config/app";
 import { createCompany } from "./endpoints/createCompany";
+import { createMaterialNeedsByCompanyId } from "./endpoints/createMaterialNeedsByCompanyId";
+import { createMaterialProducesByCompanyId } from "./endpoints/createMaterialProducesByCompanyId";
 import { createWaste } from "./endpoints/createWaste";
 import { getCompanies } from "./endpoints/getCompanies";
+import { getCompanyById } from "./endpoints/getCompanyById";
 import { getCompanyByMaterialNeeds } from "./endpoints/getCompanyByMaterialNeeds";
 import { getCompanyByWasteProduced } from "./endpoints/getCompanyByWasteProduced";
 import { getWastes } from "./endpoints/getWastes";
@@ -10,15 +13,16 @@ import { getWastesByMaterialType } from "./endpoints/getWastesByMaterialType";
 import { updateCompany } from "./endpoints/updateCompany";
 import { updateWasteStatus } from "./endpoints/updateWasteStatus";
 
-
 app.post("/company", createCompany);
 app.post("/waste", createWaste);
+app.post("/needs/:id", createMaterialNeedsByCompanyId);
+app.post("/produces/:id", createMaterialProducesByCompanyId);
 app.get("/company", getCompanies);
 app.get("/company/waste", getCompanyByWasteProduced);
 app.get("/company/needs", getCompanyByMaterialNeeds);
+app.get("/company/:id", getCompanyById);
 app.get("/waste", getWastes);
 app.get("/wastes-near-me", getWastesByCity);
 app.get("/wastes-by-type", getWastesByMaterialType);
 app.patch("/waste/:id/status", updateWasteStatus);
 app.patch("/company/:id", updateCompany);
-
