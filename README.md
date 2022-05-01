@@ -1,6 +1,5 @@
 #### ph-team-25
 
-**[PT-BR]**
 Projeto do hackathon Provihack do Agora promovido pela Provi
 
 # TryAgain
