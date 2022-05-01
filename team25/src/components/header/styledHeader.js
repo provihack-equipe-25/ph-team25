@@ -41,7 +41,7 @@ export const HeaderContainer = styled.header`
     transition: 400ms ease;
     cursor: pointer;
     :hover{
-      opacity: 90%;
+      opacity: 80%;
     }
     :active{
       opacity: 100%;

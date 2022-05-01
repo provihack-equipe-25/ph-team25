@@ -11,12 +11,12 @@ export default function Header() {
     <HeaderContainer>
       <div className='links'>
        <img onClick={() => navigate('/')} src={logo} alt='TryAgain logo'/>
-       <a href='' id='home'>Home</a>
-       <a href=''>Encontrar Parceiros</a>
-       <a href=''>Blog</a>
+       <a href='/' id='home'>Home</a>
+       <a href='/search'>Encontrar Parceiros</a>
+       <a href='/'>Blog</a>
        <a href=''>Sobre</a>
       </div>
-        <button>Login</button>
+        <button onClick={() => navigate('/login')}>Login</button>
     </HeaderContainer>
   )
 }
