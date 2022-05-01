@@ -15,4 +15,21 @@ const Register = () => {
       navigate("/dashboard");
     }
   });
+
+  const formSchema = yup.object().shape({
+      nome:
+      imagem:
+      cnpj:
+      email:
+      senha:
+      endereço:
+      telefone:
+      numerodeContato:
+      materialDesejado:
+      materialDisponivel:
+
+
+  })
+
+
 };
