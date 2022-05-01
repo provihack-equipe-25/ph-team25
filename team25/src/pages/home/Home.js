@@ -1,5 +1,6 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
+import BaseButton from "../../components/base-button/BaseButton"
 import Header from "../../components/header/Header"
 import { FirstSection, HomeContainer, SecondSection } from "./styledHome"
 
@@ -16,14 +17,14 @@ export default function Home() {
             Cerca de 170 mil toneladas do lixo brasileiro são de produtos
             têxteis, ou seja, sobras e descartes de tecido.
           </p>
-          <p>* piaui.folha.uol.com.br </p>
-          <button
+          <p id="source">fonte: piaui.folha.uol.com.br </p>
+          <BaseButton color='mainYellow'
             onClick={() => {
               navigate("/signup")
             }}
           >
             Faça Parte!
-          </button>
+          </BaseButton>
         </div>
       </FirstSection>
       <SecondSection>

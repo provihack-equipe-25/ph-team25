@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { colors } from "../../constants/theme"
+import hero from "../../assets/Hero-2.png"
 
 export const HomeContainer = styled.main`
   display: flex;
@@ -11,19 +12,36 @@ export const FirstSection = styled.section`
   display: flex;
   align-items: center;
   padding: 78px 120px 106px 120px;
-  background-color: ${colors.mainlight};
+  background-image: url(${hero});
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 70vh;
   .info {
     display: flex;
     flex-direction: column;
+    width: 50%;
     h1 {
+      margin: 15px 0;
+      color: ${colors.mainYellow};
       font-style: normal;
       font-weight: 800;
       font-size: 72px;
+      line-height: 100px;
     }
     p {
+      margin: 15px 0;
+      color: white;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
+      line-height: 33px;
+    }
+    #source{
+      margin: 0;
+      font-size: 12px;
+      font-style: italic;
     }
   }
 `
@@ -50,15 +68,6 @@ export const SecondSection = styled.section`
   }
   .rs {
     display: flex;
-    div {
-      margin: 0 ;
-      width: 386px;
-      height: 386px;
-      left: 120px;
-      top: 315px;
-
-      background: #ebebeb;
-      border-radius: 4px;
-    }
+   
   }
 `
