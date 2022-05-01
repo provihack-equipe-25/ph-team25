@@ -6,6 +6,9 @@ import base_url from "../../services/base_url";
 const CompaniesContext = createContext();
 
 export const CompaniesProvider = ({ children }) => {
+  const [companys, setCompanys] = useState([]);
+  const [company, setCompany] = useState(null);
+
   const navigate = useNavigate();
 
   const userLogin = (datas) => {
@@ -37,15 +40,21 @@ export const CompaniesProvider = ({ children }) => {
       base_url
         .get("/company")
         .then((response) => {
-          return response.data;
+          setCompanys(response.data);
         })
         .catch(() => {
           localStorage.removeItem("@userToken");
+          setCompanys([]);
         });
     }
   };
 
-  const getCompanyId = () => {
-    const token = localStorage.getItem("@userToken");
+  const getCompanyId = (id) => {
+    base_url
+      .get(`/company/${id}`)
+      .then((response) => {
+        setCompany(response.data);
+      })
+      .catch(() => {});
   };
 };
