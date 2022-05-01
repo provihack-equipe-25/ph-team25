@@ -66,4 +66,13 @@ export const CompaniesProvider = ({ children }) => {
       })
       .catch(() => {});
   };
+
+  const getCompanyNeeds = (needs) => {
+    base_url
+      .get(`/company/${needs}`)
+      .then((response) => {
+        setCompanys(response.data);
+      })
+      .catch(() => {});
+  };
 };
