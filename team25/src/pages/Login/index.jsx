@@ -43,7 +43,7 @@ const Login = () => {
         <span>{errors.email?.message}</span>
         <Input {...register("senha")} type="password" placeholder="Senha" />
         <span>{errors.senha?.message}</span>
-        <button>Entrar</button>
+        <button type="submit">Entrar</button>
       </Form>
     </Container>
   );
