@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     #home {
-      color: ${colors.main};
+      color: ${colors.secondary};
     }
     a {
       margin: 0 30px;
@@ -32,16 +32,19 @@ export const HeaderContainer = styled.header`
     width: 182px;
     height: 60px;
     border: none;
-    background: #9b9a98;
+    background: ${colors.main};
     border-radius: 4px;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     color: white;
-    transition: 300ms ease;
+    transition: 400ms ease;
     cursor: pointer;
     :hover{
-      opacity: 80%;
+      opacity: 90%;
+    }
+    :active{
+      opacity: 100%;
     }
   }
 `

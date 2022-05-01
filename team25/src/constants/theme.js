@@ -1,4 +1,7 @@
 export const colors = {
-  main: "#9B9A98",
-  background: "#D2D1D2",
+  main: "#3A86FF",
+  mainlight: "#D1E9FF",
+  mainfade: "#EFFDFF",
+  secondary: "#4B4B4B",
+  background: "#A9A9A9",
 }
