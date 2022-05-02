@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../components/header/Header";
 import { useCompanies } from "../../provider/company";
 import base_url from "../../services/base_url";
-import { HomeContainer } from "./styledDashboard";
+import { HomeContainer } from "../dashboard/styledDashboard";
 
 const Company = (props) => {
   const navigate = useNavigate();
