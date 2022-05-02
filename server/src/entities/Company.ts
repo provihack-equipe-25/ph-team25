@@ -4,6 +4,7 @@ export class Company {
   constructor(
     private id: string,
     private name: string,
+    private about: string,
     private url: string,
     private image: string,
     private cnpj: string,
@@ -22,6 +23,9 @@ export class Company {
   };
   public getName = (): string => {
     return this.name;
+  };
+  public getAbout = (): string => {
+    return this.about;
   };
   public getUrl = (): string => {
     return this.url;
@@ -64,6 +68,7 @@ export class Company {
     return new Company(
       data.id,
       data.name,
+      data.about,
       data.url,
       data.image,
       data.cnpj,

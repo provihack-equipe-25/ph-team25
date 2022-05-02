@@ -54,16 +54,29 @@ export class WasteDatabase extends BaseDatabase {
     }
   };
 
+  public getWasteByCompanyId = async (companyId: string): Promise<Waste[]> => {
+    try {
+      const result = await BaseDatabase.connection("waste").where({
+        company_id: companyId,
+      });
+
+      return result;
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  };
+
   public updateWasteStatus = async (id: string): Promise<void> => {
     try {
-      const [target] = await BaseDatabase.connection("waste").select("taken").where({id});
-      console.log(target)
-      if (target.taken === 0){
-        await BaseDatabase.connection("waste").update("taken", 1).where({id})
-      }else{
-        await BaseDatabase.connection("waste").update("taken", 0).where({id})
+      const [target] = await BaseDatabase.connection("waste")
+        .select("taken")
+        .where({ id });
+      console.log(target);
+      if (target.taken === 0) {
+        await BaseDatabase.connection("waste").update("taken", 1).where({ id });
+      } else {
+        await BaseDatabase.connection("waste").update("taken", 0).where({ id });
       }
-      
     } catch (error: any) {
       throw new Error(error.sqlMessage || error.message);
     }
