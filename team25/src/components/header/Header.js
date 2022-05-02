@@ -23,9 +23,7 @@ export default function Header() {
           }} id="home">
           Home
         </a>
-        <a>Encontrar Parceiros</a>
-        <a>Blog</a>
-        <a>Sobre</a>
+        <a href="/search">Encontrar Parceiros</a>
       </div>
       {loggedin ? (
         <BaseButton color="mainYellow" shadow="none"

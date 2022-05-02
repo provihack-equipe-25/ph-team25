@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/header/Header";
+import WasteMaterial from "../../components/waste-material/WasteMaterial";
 import { useCompanies } from "../../provider/company";
 import base_url from "../../services/base_url";
 import { HomeContainer } from "./styledDashboard";
@@ -42,16 +43,19 @@ const Dashboard = (props) => {
   return (
     <HomeContainer>
       <Header />
+      <div className="company">
       <img src={cpn[0].image} alt="imagem"></img>
-      <div>
-        <p>{cpn[0].name}</p>
-        <p>{cpn[0].wasteProduced}</p>
-        <p>{cpn[0].materialNeeds}</p>
+      <div className="info">
+
+        <p id="name">{cpn[0].name}</p>
+        <WasteMaterial name={cpn[0].wasteProduced}/>
+        <WasteMaterial name={cpn[0].materialNeeds}/>
         <p>{cpn[0].url}</p>
         <p>{cpn[0].contactNumber}</p>
         <p>{cpn[0].email}</p>
         <h3>sobre</h3>
         <p>{cpn[0].about}</p>
+      </div>
       </div>
       <h2>Materiais para descarte</h2>
       {wastes.map((e) => {
