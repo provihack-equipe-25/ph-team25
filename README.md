@@ -46,6 +46,9 @@ Para rodar o front-end abra outra janela de terminal no diretório raiz do proje
 * `npm install`
 * `npm start` 
 
+## 📄 Documentação da API
+https://documenter.getpostman.com/view/19294478/UyrGBu2E
+
 ## 🛠️ Construído com
 
 O projeto foi criado com as seguintes tecnologias
