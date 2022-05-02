@@ -6,36 +6,37 @@ import { useCompanies } from "../../provider/company";
 import base_url from "../../services/base_url";
 import { HomeContainer } from "./styledDashboard";
 
-const Dashboard = (props) => {
+const Company = (props) => {
   const navigate = useNavigate();
   const [cpn, setCpn] = useState([
     {
-      name: "abfashion",
+      name: "C&iFood",
       about:
         "O que há de mais atualizado no mundo da moda ao seu alcance. Coleções novas em todas as estações, criadas com curadoria especializada.",
-      url: "https://abstartups.com.br/",
-      image: "https://abstartups.com.br/wp-content/uploads/2020/09/logo1.png",
+      url: "https://www.ifood.com.br",
+      image:
+        "https://www.abcdacomunicacao.com.br/wp-content/uploads/ifood_logo-baixa.png",
       cnpj: "10.199.778/0001-25",
-      email: "fashion@abstartups.com",
+      email: "ceifood@ifood.com",
       password: "23476234%%",
-      city: "Belém",
-      state: "PA",
-      address: "Alameda Vicente Pinzon, 54",
+      city: "Osasco",
+      state: "SP",
+      address: "Avenida dos Autonomistas, nº 1496, Vila Yara",
       phone: "(11) 6300-0000",
       contactNumber: "(11) 99090-0000",
-      materialNeeds: ["lã"],
-      wasteProduced: "Seda",
+      materialNeeds: ["Tencel"],
+      wasteProduced: "Elastano",
     },
   ]);
   const [wastes, setwastes] = useState([
     {
       companyId: "53120fcd-71f8-49cd-b082-9f0d8604e422",
-      name: "Touca",
-      type: "Lã",
-      quantity: "31",
-      location: "Curitiba",
+      name: "Tecido",
+      type: "Elastano",
+      quantity: "40",
+      location: "Osasco",
       image:
-        "https://secure-static.vans.com.br/medias/sys_master/vans/vans/he3/h0b/h00/h00/9543472513054/4600500050004U-01-BASEIMAGE-Midres.jpg",
+        "https://www.maximustecidos.com.br/fotos/grande/290763fg1/tecido-viscose-com-elastano-marsala.jpg",
     },
   ]);
 
@@ -67,4 +68,4 @@ const Dashboard = (props) => {
     </HomeContainer>
   );
 };
-export default Dashboard;
+export default Company;

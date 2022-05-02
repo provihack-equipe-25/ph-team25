@@ -36,7 +36,7 @@ export const CompaniesProvider = ({ children }) => {
     base_url
       .get("/company")
       .then((response) => {
-        setCompanys(response);
+        setCompanys(response.data);
       })
       .catch(() => {});
   };
@@ -45,7 +45,7 @@ export const CompaniesProvider = ({ children }) => {
     base_url
       .get(`/company/${id}`)
       .then((response) => {
-        setCompany(response);
+        setCompany(response.data);
       })
       .catch(() => {});
   };
@@ -54,7 +54,7 @@ export const CompaniesProvider = ({ children }) => {
     base_url
       .get(`/company/${waste}`)
       .then((response) => {
-        setCompanys(response);
+        setCompanys(response.data);
       })
       .catch(() => {});
   };
