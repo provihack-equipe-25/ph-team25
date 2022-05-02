@@ -13,4 +13,5 @@ export const MaterialContainer = styled.div`
   font-weight: 400;
   font-size: 12px;
   color: #ff1c1c;
+  margin: 4px;
 `
