@@ -16,7 +16,7 @@ O usuário pode cadastrar sua empresa, os materiais que ela descarta e os que el
 
 # Deploy
 
-https://technicalshare25.surge.sh
+http://tryagain-25.surge.sh/
 
 ## 🚀 Começando
 
