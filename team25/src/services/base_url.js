@@ -1,3 +1,7 @@
-const base_url = "https://squad-25-provihack.herokuapp.com"
+import axios from "axios";
 
-export default base_url
+const api = axios.create({
+    baseURL: "https://squad-25-provihack.herokuapp.com/",
+  });
+  
+  export default api;
