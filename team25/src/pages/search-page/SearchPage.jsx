@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import BaseButton from "../../components/base-button/BaseButton"
+import CompanyCard from "../../components/company-card/CompanyCard"
 import Header from "../../components/header/Header"
 import { PageContainer, SelectButton } from "./styledSearchPage"
 
