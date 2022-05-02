@@ -7,18 +7,18 @@ Projeto do hackathon Provihack do Agora promovido pela Provi
 TryAgain é uma plataforma que conecta empresas em prol de uma causa única: reciclagem de produtos têxteis visando otimizar o uso de materiais já existentes e minimizando as consequências climáticas da fabricação de novos produtos. 
 O usuário pode cadastrar sua empresa, os materiais que ela descarta e os que ela precisa, bem como publicar anúncios de materiais e adquirir materiais de outras empresas.  
 
-# Identidade visual
+# 👁 Identidade visual
 
 ![logowhite](https://user-images.githubusercontent.com/90166189/166166449-0590aa1f-7f15-4877-8235-c81f9d54969c.png)
 ![logoblack](https://user-images.githubusercontent.com/90166189/166166487-b901d8b2-a015-4a20-8a2a-f0b5fae32190.png)
 ![appsymbol](https://user-images.githubusercontent.com/90166189/166166494-dd319357-e2f0-4b09-bca6-eeebed3a1481.png)
 
 
-# Deploy
+# 🧑🏼‍💻 Deploy
 
 http://tryagain-25.surge.sh/
 
-# Video Demo
+# 📼 Video Demo
 
 https://youtu.be/hpfLWReM6u4
 
