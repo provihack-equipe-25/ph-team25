@@ -75,6 +75,20 @@ class CompanyDatabase extends BaseDatabase_1.BaseDatabase {
                 throw new Error(error.sqlMessage || error.message);
             }
         });
+        this.getCompanyById = (id) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                let company = yield BaseDatabase_1.BaseDatabase.connection("companies").where({
+                    id,
+                });
+                const wastes = yield BaseDatabase_1.BaseDatabase.connection("waste").where("company_id", id);
+                const needs = yield BaseDatabase_1.BaseDatabase.connection("material_needs").where("company_id", id);
+                const produced = yield BaseDatabase_1.BaseDatabase.connection("material_produces").where("company_id", id);
+                return Object.assign(Object.assign({}, company[0]), { wastes: wastes, needs: needs, produced: produced });
+            }
+            catch (error) {
+                throw new Error(error.sqlMessage || error.message);
+            }
+        });
         this.getCompanyByWasteProduced = (waste) => __awaiter(this, void 0, void 0, function* () {
             try {
                 const result = yield BaseDatabase_1.BaseDatabase.connection("companies")

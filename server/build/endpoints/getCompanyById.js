@@ -9,22 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createWaste = void 0;
-const WasteDatabase_1 = require("../data/WasteDatabase");
-const Waste_1 = require("../entities/Waste");
-const generateId_1 = require("../services/generateId");
-const createWaste = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.getCompanyById = void 0;
+const CompanyDatabase_1 = require("../data/CompanyDatabase");
+const getCompanyById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { companyId, name, type, quantity, location, image } = req.body;
-        const id = (0, generateId_1.generateId)();
-        if (!name || !type || !quantity || !location || !image) {
-            res.statusCode = 422;
-            throw new Error("Por favor, preencha todos os campos.");
-        }
-        let taken = false;
-        const newWaste = new Waste_1.Waste(id, companyId, name, type, quantity, taken, location, image);
-        yield new WasteDatabase_1.WasteDatabase().registerWaste(newWaste);
-        res.status(201).send({ message: "Anúncio cadastrado com sucesso!" });
+        const id = req.params.id;
+        const response = yield new CompanyDatabase_1.CompanyDatabase().getCompanyById(id);
+        res.status(200).send(response);
     }
     catch (error) {
         if (res.statusCode === 200) {
@@ -35,5 +26,5 @@ const createWaste = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         }
     }
 });
-exports.createWaste = createWaste;
-//# sourceMappingURL=createWaste.js.map
+exports.getCompanyById = getCompanyById;
+//# sourceMappingURL=getCompanyById.js.map
