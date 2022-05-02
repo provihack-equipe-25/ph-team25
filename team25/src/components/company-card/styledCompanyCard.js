@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { colors } from "../../constants/theme"
 
 export const CardContainer = styled.div`
+cursor: pointer;
+margin: 8px;
   color: white;
   width: 212px;
   height: 256px;
@@ -28,13 +30,13 @@ export const CardContainer = styled.div`
     flex-wrap: wrap;
     align-items: center;
   }
-  h1 {
+  h4 {
     margin: 4px 0;
     font-weight: 600;
     font-size: 20px;
     color: white;
   }
-  h2 {
+  h3 {
     margin: 4px 0;
     font-weight: 600;
     font-size: 18px;
