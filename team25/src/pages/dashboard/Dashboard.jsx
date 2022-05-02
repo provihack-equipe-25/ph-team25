@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BaseButton from "../../components/base-button/BaseButton";
 import Header from "../../components/header/Header";
 import WasteMaterial from "../../components/waste-material/WasteMaterial";
 import { useCompanies } from "../../provider/company";
@@ -58,9 +59,10 @@ const Dashboard = (props) => {
       </div>
       </div>
       <h2>Materiais para descarte</h2>
+      <BaseButton onClick={() => navigate('/addwaste')}>Adicionar Material</BaseButton>
       {wastes.map((e) => {
         return (
-          <div>
+          <div key={e.id}>
             <img src={e.image} alt="iamgem" />
             <p>
               {e.name} - {e.quantity}Kg

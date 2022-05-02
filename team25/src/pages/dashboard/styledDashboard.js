@@ -19,7 +19,12 @@ export const HomeContainer = styled.main`
     }
     .info{
       color: white;
-      
+      background-color: rgba(62, 62, 62, 0.52);
+      backdrop-filter: blur(32px);
+      #name{
+        font-weight: 800;
+font-size: 64px;
+      }
     }
   }
 `
