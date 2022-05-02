@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://squad-25-provihack.herokuapp.com/",
-  });
-  
-  export default api;
+  baseURL: "localhost:3003",
+});
+
+export default api;
