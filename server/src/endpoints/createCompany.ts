@@ -13,6 +13,7 @@ export const createCompany = async (
   try {
     const {
       name,
+      about,
       url,
       image,
       cnpj,
@@ -31,6 +32,7 @@ export const createCompany = async (
 
     if (
       !name ||
+      !about ||
       !url ||
       !image ||
       !cnpj ||
@@ -62,6 +64,7 @@ export const createCompany = async (
     const newCompany = new Company(
       id,
       name,
+      about,
       url,
       image,
       cnpj,
