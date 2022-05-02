@@ -1,5 +1,4 @@
 import { Company } from "../entities/Company";
-import { generateId } from "../services/generateId";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class CompanyDatabase extends BaseDatabase {
@@ -8,6 +7,7 @@ export class CompanyDatabase extends BaseDatabase {
       await BaseDatabase.connection("companies").insert({
         id: company.getId(),
         company_name: company.getName(),
+        about: company.getAbout(),
         company_url: company.getUrl(),
         company_image: company.getImage(),
         cnpj: company.getCnpj(),
@@ -29,6 +29,20 @@ export class CompanyDatabase extends BaseDatabase {
       const company = await BaseDatabase.connection("companies").where({
         email,
       });
+      return company[0] && Company.companyModelConversor(company[0]);
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  };
+
+  public getCompanyIdByEmail = async (email: string): Promise<any> => {
+    try {
+      const company = await BaseDatabase.connection("companies")
+        .select("id")
+        .where({
+          email,
+        });
+
       return company[0] && Company.companyModelConversor(company[0]);
     } catch (error: any) {
       throw new Error(error.sqlMessage || error.message);
@@ -93,7 +107,7 @@ export class CompanyDatabase extends BaseDatabase {
         "company_id",
         id
       );
-      
+
       return {
         ...company[0],
         wastes: wastes,
